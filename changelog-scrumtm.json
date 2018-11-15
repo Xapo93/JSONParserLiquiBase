@@ -1,0 +1,6789 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1542150309642-1",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_EMPLOYEE_TYPE_PK"
+                  },
+                  "name": "TYPE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TYPE_NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              }]
+            ,
+            "tableName": "SCT_EMPLOYEE_TYPE"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-2",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_TASKS_S1",
+            "startValue": 301
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-3",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_TIMESHEET_DETAILS_PK"
+                  },
+                  "name": "TIMESHEET_DETAIL_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "INPUT_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "HOURS",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PROJECT_RESOURCE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PERIOD_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TASK_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "APPR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "STATUS_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              }]
+            ,
+            "tableName": "SCT_TIMESHEET_DETAILS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-4",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_ROLE_PAGES_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-5",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PROJECT_FUNDINGS_PK"
+                  },
+                  "name": "PROJECT_FUNDING_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "AMOUNT",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "FUNDING_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECT_FUNDINGS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-6",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_TIMESHEETS_PK"
+                  },
+                  "name": "PERIOD_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "START_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "END_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "PERIOD_NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "QUARTER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "YEAR",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "STATUS_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "APPR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              }]
+            ,
+            "tableName": "SCT_PERIODS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-7",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_DT_ACTIVITY_COMMENT_PK"
+                  },
+                  "name": "COMMENT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DETAIL_COMMENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "DT_ACTIVITY_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_DETAIL_COMMENT"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-8",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_EMAIL_AFFECTS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "EMAIL_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "USERNAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_TZ_PREF",
+                  "type": "VARCHAR2(60 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_LANG_CODE",
+                  "type": "VARCHAR2(10 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_OPTED_OUT_YN",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_SENT_ON",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_ERROR",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-9",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_EMPLOYEE_TYPE_S1",
+            "startValue": 180
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-10",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_EMPLOYEES_PK"
+                  },
+                  "name": "EMPLOYEE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_ABBR",
+                  "type": "VARCHAR2(6 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "FIRST_NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "LAST_NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "SUPPLIER_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "IS_PARTNER",
+                  "type": "CHAR(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "USERNAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PSWD",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TYPE_ID",
+                  "type": "NUMBER(38, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "MOBILE_PHONE",
+                  "type": "VARCHAR2(20 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "WORK_PHONE",
+                  "type": "VARCHAR2(20 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TITLE",
+                  "type": "VARCHAR2(10 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ADDRESS",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_NAME",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_MIMETYPE",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_CHARSET",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_LASTUPD",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACCOUNT_LOCKED",
+                  "type": "VARCHAR2(3 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACCESS_LEVEL_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "IS_OWNER",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "IS_ACTIVE",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "SLACK_USER_ID",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_EMPLOYEES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-11",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_SKILLS_PK"
+                  },
+                  "name": "SKILL_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "SKILL_ABBR",
+                  "type": "VARCHAR2(6 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "INTERNAL_RATE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BILL_RATE",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "SCT_SKILLS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-12",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PROJECT_CYCLES_S1",
+            "startValue": 200
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-13",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PROJECT_STATUS_PK"
+                  },
+                  "name": "STATUS_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECT_STATUS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-14",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_EXPENSES_SEQ",
+            "startValue": 41
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-15",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_ERRORS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValueComputed": "LOCALTIMESTAMP",
+                  "name": "ERR_TIME",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "APP_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "APP_PAGE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "APP_USER",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_AGENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "IP_ADDRESS",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "IP_ADDRESS2",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "MESSAGE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PAGE_ITEM_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "REGION_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "COLUMN_ALIAS",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_NUM",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "APEX_ERROR_CODE",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ORA_SQLCODE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ORA_SQLERRM",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ERROR_BACKTRACE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG1_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG1_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG2_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG2_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG3_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG3_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG4_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG4_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG5_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG5_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG6_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG6_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG7_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG7_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG8_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG8_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG9_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG9_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG10_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG10_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROCEDURE_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_ERRORS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-16",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PERIOD_ACTIVITIES_PK"
+                  },
+                  "name": "PERIOD_ACTIVITY_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(1000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PERIOD_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ACTIVITY_TYPE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PERIOD_ACTIVITIES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-17",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PROJECTS_PK"
+                  },
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_ABBR",
+                  "type": "VARCHAR2(6 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BUDGET_COST",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "BUDGET_HOURS",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "CLIENT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PROJECT_CYCLE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "STATUS",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CLIENT_PROJECT_CODE",
+                  "type": "VARCHAR2(20 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CLIENT_TIME_SYSTEM",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_MANAGER_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_OWNER_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PURCHASE_ORDER_REQUIRED",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PURCHASE_ORDER_NUMBER",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "SOW_URL",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_TYPE_ID",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-18",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_EMAIL_AFFECTS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "EMAIL_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "USERNAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_TZ_PREF",
+                  "type": "VARCHAR2(60 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_LANG_CODE",
+                  "type": "VARCHAR2(10 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_OPTED_OUT_YN",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_SENT_ON",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_ERROR",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-19",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_SUPPLIERS_PK"
+                  },
+                  "name": "SUPPLIER_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "SUPPLIER_ABBR",
+                  "type": "VARCHAR2(6 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_SUPPLIERS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-20",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_TASKS_PK"
+                  },
+                  "name": "TASK_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PARENT_TASK_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "BILLABLE",
+                  "type": "VARCHAR2(2 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_TASKS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-21",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_DETAIL_ACTIVITIES_S1",
+            "startValue": 1500
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-22",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_DETAIL_COMMENT_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-23",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PROJECTS_S1",
+            "startValue": 320
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-24",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_EMPLOYEE_ROLES_PK"
+                  },
+                  "name": "EMPLOYEE_ROLE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ROLE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "EMPLOYEE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              }]
+            ,
+            "tableName": "SCT_EMPLOYEE_ROLES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-25",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_RATES_S1",
+            "startValue": 240
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-26",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PARTNERS_PK"
+                  },
+                  "name": "PARTNER_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PARTNERS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-27",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "TIMESHEET_STATUS_PK"
+                  },
+                  "name": "STATUS_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "STATUS",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PRIORITY_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              }]
+            ,
+            "tableName": "SCT_TIMESHEET_STATUS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-28",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_METRICS_TIMEKEEPING_S1",
+            "startValue": 220
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-29",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_PREFERENCES_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_VALUE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValue": "N",
+                  "name": "IS_REQUIRED_YN",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValue": "TEXT",
+                  "name": "DATATYPE",
+                  "type": "VARCHAR2(5 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "VALID_VALUES",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_PREFERENCES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-30",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_ERRORS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValueComputed": "LOCALTIMESTAMP",
+                  "name": "ERR_TIME",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "APP_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "APP_PAGE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "APP_USER",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_AGENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "IP_ADDRESS",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "IP_ADDRESS2",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "MESSAGE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PAGE_ITEM_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "REGION_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "COLUMN_ALIAS",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_NUM",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "APEX_ERROR_CODE",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ORA_SQLCODE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ORA_SQLERRM",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ERROR_BACKTRACE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG1_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG1_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG2_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG2_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG3_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG3_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG4_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG4_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG5_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG5_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG6_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG6_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG7_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG7_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG8_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG8_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG9_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG9_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG10_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ARG10_VAL",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROCEDURE_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_ERRORS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-31",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_NOTIFICATIONS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "NOTIFICATION_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTIFICATION_DESCRIPTION",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "NOTIFICATION_TYPE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_SEQUENCE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_FROM",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_UNTIL",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              }]
+            ,
+            "tableName": "GP_NOTIFICATIONS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-32",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_ACTIVITIES_PK"
+                  },
+                  "name": "ACTIVITY_TYPE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_ACTIVITY_TYPE"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-33",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PERIOD_COMMENT_PK"
+                  },
+                  "name": "COMMENT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACTIVITY_COMMENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PERIOD_ACTIVITY_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PERIOD_COMMENT"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-34",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_EMPLOYEES_S1",
+            "startValue": 460
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-35",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PARTNERS_S1",
+            "startValue": 180
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-36",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_FEEDBACK_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "APPLICATION_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PAGE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_AGENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "FEEDBACK",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "RESPONSE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "STATUS",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_FEEDBACK"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-37",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_EXPENSES_PK"
+                  },
+                  "name": "EXPENSE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "EXPENSE_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "AMOUNT",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "VENDOR",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CATEGORY",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMPLOYEE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "SCT_EXPENSES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-38",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_USER_PREFERENCES_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "USER_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_VALUE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_USER_PREFERENCES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-39",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PROJECT_RESOURCES_PK"
+                  },
+                  "name": "PROJECT_RESOURCE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "EMPLOYEE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "OVERRIDE_RATE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "SKILL_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "RATE_ID",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECT_RESOURCES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-40",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_CLIENTS_PK"
+                  },
+                  "name": "CLIENT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CLIENT_ABBR",
+                  "type": "VARCHAR2(6 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CLIENT_COLOR",
+                  "type": "VARCHAR2(20 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BILL_TO",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "STREET_ADDRESS",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "STATE",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CITY",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ZIP_CODE",
+                  "type": "VARCHAR2(10 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "COUNTRY",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHONE_NUMBER",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "WEBSITE",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_CLIENTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-41",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_USER_PREFERENCES_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "USER_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_VALUE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_USER_PREFERENCES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-42",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_CLIENTS_S1",
+            "startValue": 300
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-43",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PROJECT_TYPE"
+                  },
+                  "name": "PROJECT_TYPE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_TYPE",
+                  "type": "VARCHAR2(250 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECT_TYPE"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-44",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_METRICS_TIMEKEEPING_PK"
+                  },
+                  "name": "TIMEKEEPING_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "LABEL",
+                  "type": "VARCHAR2(150 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "VALUE",
+                  "type": "VARCHAR2(25 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_ORDER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_DATE",
+                  "type": "VARCHAR2(20 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "VARCHAR2(20 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_METRICS_TIMEKEEPING"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-45",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_FUNCTIONS_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-46",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_USERS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_ADDRESS",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACCESS_LEVEL_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACCOUNT_LOCKED",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "USERNAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "FIRST_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "LAST_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "WORK_PHONE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "MOBILE_PHONE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TITLE",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ADDRESS",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_BLOB",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_NAME",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_MIMETYPE",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_CHARSET",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_LASTUPD",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_USERS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-47",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_SKILLS_S1",
+            "startValue": 220
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-48",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_FEEDBACK_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "APPLICATION_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PAGE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "USER_AGENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "FEEDBACK",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "RESPONSE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "STATUS",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_FEEDBACK"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-49",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_NOTIFICATIONS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "NOTIFICATION_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTIFICATION_DESCRIPTION",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "NOTIFICATION_TYPE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_SEQUENCE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_FROM",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISPLAY_UNTIL",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              }]
+            ,
+            "tableName": "ST_NOTIFICATIONS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-50",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PROJECT_FUNDINGS_S1",
+            "startValue": 240
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-51",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_EMAILS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "TEMPLATE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "SUBJECT",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BODY1_TEXT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TABLE_CONTENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BODY2_TEXT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACTION_LABEL",
+                  "type": "VARCHAR2(70 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACTION_LINK",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValue": "Y",
+                  "name": "CAN_OPT_OUT_YN",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_BODY",
+                  "type": "CLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "NBR_EMAILS_SENT",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_EMAILS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-52",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PAGES_PK"
+                  },
+                  "name": "PAGE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PAGE_NAME",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PAGE_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              }]
+            ,
+            "tableName": "SCT_PAGES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-53",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "FUNDINGS_PK"
+                  },
+                  "name": "FUNDING_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_FUNDINGS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-54",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PROJECT_RESOURCES_S1",
+            "startValue": 480
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-55",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_ROLE_PAGES_PK"
+                  },
+                  "name": "ROLE_PAGE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ROLE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PAGE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              }]
+            ,
+            "tableName": "SCT_ROLE_PAGES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-56",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_SUPPLIERS_S1",
+            "startValue": 180
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-57",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_TIMESHEET_STATUS_S1",
+            "startValue": 200
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-58",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PERIODS_S1",
+            "startValue": 160
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-59",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_PREFERENCES_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PREFERENCE_VALUE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValue": "N",
+                  "name": "IS_REQUIRED_YN",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValue": "TEXT",
+                  "name": "DATATYPE",
+                  "type": "VARCHAR2(5 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "VALID_VALUES",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_PREFERENCES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-60",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_ERROR_LOOKUP_PK"
+                  },
+                  "name": "CONSTRAINT_NAME",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MESSAGE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "LANGUAGE_CODE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_ERROR_LOOKUP"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-61",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PAGES_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-62",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PERIOD_COMMENT_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-63",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PROJECTS_RATES_PK"
+                  },
+                  "name": "RATE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "BILL_RATE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "INTERNAL_RATE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "SKILL_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "OVERRIDE_NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECTS_RATES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-64",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_TIMESHEET_DETAILS_S1",
+            "startValue": 1960
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-65",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_FUNDINGS_S1",
+            "startValue": 120
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-66",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_ROLES_PK"
+                  },
+                  "name": "ROLE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROLE_NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              }]
+            ,
+            "tableName": "SCT_ROLES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-67",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_CYCLES_PK"
+                  },
+                  "name": "PROJECT_CYCLE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECT_CYCLES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-68",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_ROLE_FUNCTIONS_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-69",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_FUNCTIONS_PK"
+                  },
+                  "name": "FUNCTION_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "FUNCTION_NAME",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              }]
+            ,
+            "tableName": "SCT_FUNCTIONS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-70",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_EMAIL_TEMPLATES_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TEMPLATE_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "FULL_TEMPLATE_HTML",
+                  "type": "CLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TEXT_TEMPLATE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TABLE_OPEN_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TR_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TABLE_CLOSE_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACTION_BUTTON_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "ST_EMAIL_TEMPLATES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-71",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_RATES_PK"
+                  },
+                  "name": "RATE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BILL_RATE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "INTERNAL_RATE",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "SKILL_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "CLIENT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_CLIENTS_RATES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-72",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_ROLES_S1",
+            "startValue": 120
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-73",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_ERROR_LOOKUP_PK"
+                  },
+                  "name": "CONSTRAINT_NAME",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "MESSAGE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "LANGUAGE_CODE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_ERROR_LOOKUP"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-74",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_EMPLOYEE_ROLES_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-75",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PROJECT_PARTNERS_S1",
+            "startValue": 141
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-76",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PROJECT_STATUS_S1",
+            "startValue": 180
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-77",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_ROLE_FUNCTIONS_PK"
+                  },
+                  "name": "ROLE_FUNCTION_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ROLE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "FUNCTION_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              }]
+            ,
+            "tableName": "SCT_ROLE_FUNCTIONS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-78",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_EMAILS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "TEMPLATE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "SUBJECT",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BODY1_TEXT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TABLE_CONTENT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "BODY2_TEXT",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACTION_LABEL",
+                  "type": "VARCHAR2(70 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACTION_LINK",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValue": "Y",
+                  "name": "CAN_OPT_OUT_YN",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_BODY",
+                  "type": "CLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "NBR_EMAILS_SENT",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_EMAILS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-79",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_EMAIL_TEMPLATES_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TEMPLATE_NAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "FULL_TEMPLATE_HTML",
+                  "type": "CLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TEXT_TEMPLATE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TABLE_OPEN_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TR_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TABLE_CLOSE_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACTION_BUTTON_HTML",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_EMAIL_TEMPLATES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-80",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ACTIVITIES_PK"
+                  },
+                  "name": "DT_ACTIVITY_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DESCRIPTION",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "TIMESHEET_DETAIL_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ACTIVITY_TYPE_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "OLD_VALUE",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NEW_VALUE",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_DETAIL_ACTIVITIES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-81",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_PERIOD_ACTIVITIES_S1",
+            "startValue": 100
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-82",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_USERS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION_NUMBER",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "EMAIL_ADDRESS",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACCESS_LEVEL_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "ACCOUNT_LOCKED",
+                  "type": "VARCHAR2(1 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "USERNAME",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "FIRST_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "LAST_NAME",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "WORK_PHONE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "MOBILE_PHONE",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "TITLE",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ADDRESS",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_BLOB",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_NAME",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_MIMETYPE",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_CHARSET",
+                  "type": "VARCHAR2(512 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "PHOTO_LASTUPD",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTE",
+                  "type": "VARCHAR2(4000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED",
+                  "type": "TIMESTAMP(6) WITH LOCAL TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPDATED_BY",
+                  "type": "VARCHAR2(255 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "GP_USERS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-83",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createSequence": {
+            "maxValue": 9999999999999999999999999999,
+            "sequenceName": "SCT_ACTIVITY_TYPE_S1",
+            "startValue": 200
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-84",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_PROJECT_PARTNERS_PK"
+                  },
+                  "name": "PROJECT_PARTNER_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "NOTES",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ATTACHMENTS",
+                  "type": "BLOB"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "PARTNER_ID",
+                  "type": "NUMBER(*, 0)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_DT",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CR_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "UPD_USR",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              }]
+            ,
+            "tableName": "SCT_PROJECT_PARTNERS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-85",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "name": "CHECK_BATCH",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CHECK_RECEIVED_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CHECK_FROM",
+                  "type": "VARCHAR2(2000 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CHECK_AMOUNT",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "CHECK_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATED_BY",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "CREATION_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "LAST_UPDATED_BY",
+                  "type": "VARCHAR2(100 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "LAST_UPDATED_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "AOP_CHECKS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "AOP_CHECKS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-86",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "GP_ACCESS_LEVELS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ACCESS_LEVEL",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "GP_ACCESS_LEVELS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-87",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "SCT_INVOICES_PK"
+                  },
+                  "name": "INVOICE_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "INVOICE_NUMBER",
+                  "type": "VARCHAR2(50 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "INVOICE_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "DUE_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "name": "INITIAL_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "END_DATE",
+                  "type": "date"
+                }
+              },
+              {
+                "column": {
+                  "name": "PERIOD_BILLED",
+                  "type": "VARCHAR2(200 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ADDITIONAL_INFO1",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ADDITIONAL_INFO2",
+                  "type": "VARCHAR2(400 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "STATUS",
+                  "type": "VARCHAR2(20 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "DISCOUNT",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "SCT_INVOICES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-88",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "ST_ACCESS_LEVELS_PK"
+                  },
+                  "name": "ID",
+                  "type": "NUMBER"
+                }
+              },
+              {
+                "column": {
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "ACCESS_LEVEL",
+                  "type": "VARCHAR2(30 BYTE)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ROW_VERSION",
+                  "type": "NUMBER"
+                }
+              }]
+            ,
+            "tableName": "ST_ACCESS_LEVELS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-89",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "EMAIL_ID"
+                }
+              },
+              {
+                "column": {
+                  "name": "USERNAME"
+                }
+              }]
+            ,
+            "indexName": "GP_EMAIL_AFFECTS_UK1",
+            "tableName": "GP_EMAIL_AFFECTS",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "EMAIL_ID, USERNAME",
+            "constraintName": "GP_EMAIL_AFFECTS_UK1",
+            "forIndexName": "GP_EMAIL_AFFECTS_UK1",
+            "tableName": "GP_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-90",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "TEMPLATE_NAME"
+                }
+              }]
+            ,
+            "indexName": "GP_EMAIL_TEMPLATES_UK",
+            "tableName": "GP_EMAIL_TEMPLATES",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "TEMPLATE_NAME",
+            "constraintName": "GP_EMAIL_TEMPLATES_UK",
+            "forIndexName": "GP_EMAIL_TEMPLATES_UK",
+            "tableName": "GP_EMAIL_TEMPLATES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-91",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "USERNAME"
+                }
+              }]
+            ,
+            "indexName": "GP_USERS_USERNAME_UK",
+            "tableName": "GP_USERS",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "USERNAME",
+            "constraintName": "GP_USERS_USERNAME_UK",
+            "forIndexName": "GP_USERS_USERNAME_UK",
+            "tableName": "GP_USERS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-92",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "CLIENT_ABBR"
+                }
+              }]
+            ,
+            "indexName": "SCT_CLIENTS_UC",
+            "tableName": "SCT_CLIENTS",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "CLIENT_ABBR",
+            "constraintName": "SCT_CLIENTS_UC",
+            "forIndexName": "SCT_CLIENTS_UC",
+            "tableName": "SCT_CLIENTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-93",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "USERNAME"
+                }
+              }]
+            ,
+            "indexName": "SCT_EMPLOYEES_UC1",
+            "tableName": "SCT_EMPLOYEES",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "USERNAME",
+            "constraintName": "SCT_EMPLOYEES_UC1",
+            "forIndexName": "SCT_EMPLOYEES_UC1",
+            "tableName": "SCT_EMPLOYEES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-94",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "INPUT_DATE"
+                }
+              },
+              {
+                "column": {
+                  "name": "PROJECT_RESOURCE_ID"
+                }
+              },
+              {
+                "column": {
+                  "name": "TASK_ID"
+                }
+              }]
+            ,
+            "indexName": "SCT_TIMESHEET_DETAILS_UK1",
+            "tableName": "SCT_TIMESHEET_DETAILS",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "INPUT_DATE, PROJECT_RESOURCE_ID, TASK_ID",
+            "constraintName": "SCT_TIMESHEET_DETAILS_UK1",
+            "forIndexName": "SCT_TIMESHEET_DETAILS_UK1",
+            "tableName": "SCT_TIMESHEET_DETAILS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-95",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "EMAIL_ID"
+                }
+              },
+              {
+                "column": {
+                  "name": "USERNAME"
+                }
+              }]
+            ,
+            "indexName": "ST_EMAIL_AFFECTS_UK1",
+            "tableName": "ST_EMAIL_AFFECTS",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "EMAIL_ID, USERNAME",
+            "constraintName": "ST_EMAIL_AFFECTS_UK1",
+            "forIndexName": "ST_EMAIL_AFFECTS_UK1",
+            "tableName": "ST_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-96",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "TEMPLATE_NAME"
+                }
+              }]
+            ,
+            "indexName": "ST_EMAIL_TEMPLATES_UK",
+            "tableName": "ST_EMAIL_TEMPLATES",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "TEMPLATE_NAME",
+            "constraintName": "ST_EMAIL_TEMPLATES_UK",
+            "forIndexName": "ST_EMAIL_TEMPLATES_UK",
+            "tableName": "ST_EMAIL_TEMPLATES"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-97",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "USERNAME"
+                }
+              }]
+            ,
+            "indexName": "ST_USERS_USERNAME_UK",
+            "tableName": "ST_USERS",
+            "unique": true
+          }
+        },
+        {
+          "addUniqueConstraint": {
+            "columnNames": "USERNAME",
+            "constraintName": "ST_USERS_USERNAME_UK",
+            "forIndexName": "ST_USERS_USERNAME_UK",
+            "tableName": "ST_USERS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-98",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "TEMPLATE_ID"
+                }
+              }]
+            ,
+            "indexName": "GP_EMAILS_IDX1",
+            "tableName": "GP_EMAILS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-99",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "EMAIL_ID"
+                }
+              }]
+            ,
+            "indexName": "GP_EMAIL_AFFECTS_IDX1",
+            "tableName": "GP_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-100",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "USERNAME"
+                }
+              }]
+            ,
+            "indexName": "GP_EMAIL_AFFECTS_IDX2",
+            "tableName": "GP_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-101",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "defaultValueComputed": "LOCALTIMESTAMP",
+                  "name": "ERR_TIME"
+                }
+              }]
+            ,
+            "indexName": "GP_ERRORS_I1",
+            "tableName": "GP_ERRORS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-102",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "PREFERENCE_NAME"
+                }
+              }]
+            ,
+            "indexName": "GP_PREFERENCES_NAME_IDX",
+            "tableName": "GP_PREFERENCES",
+            "unique": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-103",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "TEMPLATE_ID"
+                }
+              }]
+            ,
+            "indexName": "ST_EMAILS_IDX1",
+            "tableName": "ST_EMAILS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-104",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "EMAIL_ID"
+                }
+              }]
+            ,
+            "indexName": "ST_EMAIL_AFFECTS_IDX1",
+            "tableName": "ST_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-105",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "USERNAME"
+                }
+              }]
+            ,
+            "indexName": "ST_EMAIL_AFFECTS_IDX2",
+            "tableName": "ST_EMAIL_AFFECTS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-106",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "defaultValueComputed": "LOCALTIMESTAMP",
+                  "name": "ERR_TIME"
+                }
+              }]
+            ,
+            "indexName": "ST_ERRORS_I1",
+            "tableName": "ST_ERRORS"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-107",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "createIndex": {
+            "columns": [
+              {
+                "column": {
+                  "name": "PREFERENCE_NAME"
+                }
+              }]
+            ,
+            "indexName": "ST_PREFERENCES_NAME_IDX",
+            "tableName": "ST_PREFERENCES",
+            "unique": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-108",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "TEMPLATE_ID",
+            "baseTableName": "GP_EMAILS",
+            "constraintName": "GP_EMAILS_FK1",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "SET NULL",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "GP_EMAIL_TEMPLATES",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-109",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "EMAIL_ID",
+            "baseTableName": "GP_EMAIL_AFFECTS",
+            "constraintName": "GP_EMAIL_AFFECTS_FK1",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "GP_EMAILS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-110",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "USER_ID",
+            "baseTableName": "GP_USER_PREFERENCES",
+            "constraintName": "GP_USER_PREF_FK",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "CASCADE",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "GP_USERS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-111",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "EMPLOYEE_ID",
+            "baseTableName": "SCT_EXPENSES",
+            "constraintName": "SCT_EXPENSES_FK",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "EMPLOYEE_ID",
+            "referencedTableName": "SCT_EMPLOYEES",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-112",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "PROJECT_ID",
+            "baseTableName": "SCT_EXPENSES",
+            "constraintName": "SCT_EXPENSES_FK2",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "PROJECT_ID",
+            "referencedTableName": "SCT_PROJECTS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-113",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "PROJECT_ID",
+            "baseTableName": "SCT_INVOICES",
+            "constraintName": "SCT_INVOICES_FK2",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "PROJECT_ID",
+            "referencedTableName": "SCT_PROJECTS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-114",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "SKILL_ID",
+            "baseTableName": "SCT_PROJECTS_RATES",
+            "constraintName": "SCT_PROJECTS_RATES_FK",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "SKILL_ID",
+            "referencedTableName": "SCT_SKILLS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-115",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "PROJECT_ID",
+            "baseTableName": "SCT_PROJECTS_RATES",
+            "constraintName": "SCT_PROJECTS_RATES_FK2",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "PROJECT_ID",
+            "referencedTableName": "SCT_PROJECTS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-116",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "SKILL_ID",
+            "baseTableName": "SCT_PROJECT_RESOURCES",
+            "constraintName": "SCT_PROJECT_RESOURCES_CON",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "SKILL_ID",
+            "referencedTableName": "SCT_SKILLS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-117",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "PROJECT_ID",
+            "baseTableName": "SCT_TASKS",
+            "constraintName": "SCT_TASKS_FK1",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "PROJECT_ID",
+            "referencedTableName": "SCT_PROJECTS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-118",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "TEMPLATE_ID",
+            "baseTableName": "ST_EMAILS",
+            "constraintName": "ST_EMAILS_FK1",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "SET NULL",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "ST_EMAIL_TEMPLATES",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-119",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "EMAIL_ID",
+            "baseTableName": "ST_EMAIL_AFFECTS",
+            "constraintName": "ST_EMAIL_AFFECTS_FK1",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "ST_EMAILS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-120",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "USER_ID",
+            "baseTableName": "ST_USER_PREFERENCES",
+            "constraintName": "ST_USER_PREF_FK",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "CASCADE",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "ST_USERS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-121",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "ACCESS_LEVEL_ID",
+            "baseTableName": "GP_USERS",
+            "constraintName": "SYS_C0019315",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "GP_ACCESS_LEVELS",
+            "validate": true
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1542150309642-122",
+      "author": "Wicho (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "ACCESS_LEVEL_ID",
+            "baseTableName": "ST_USERS",
+            "constraintName": "SYS_C0019382",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "RESTRICT",
+            "onUpdate": "RESTRICT",
+            "referencedColumnNames": "ID",
+            "referencedTableName": "ST_ACCESS_LEVELS",
+            "validate": true
+          }
+        }]
+      
+    }
+  }
+  
+]}
